@@ -1,15 +1,15 @@
 ﻿#SingleInstance Force
 
 F13::
-Send, jackmillen2006@gmail.com
+Send, <EMAIL 1>
 Return
 
 +F13::
-Send, jmillen@lutterworthhigh.org
+Send, <EMAIL 2>
 Return
 
 ^F13::
-Send, jmillen@lutterworthhigh.co.uk
+Send, <EMAIL 3>
 Return
 
 F14::

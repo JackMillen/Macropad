@@ -7,7 +7,6 @@ I don't know what I'm doing. My code works, but it's not written in a way that i
 The Macropad is recognised by the PC as a keyboard+mouse+joystick+serial device. The buttons on the Macropad output an f13-f24 keypress. Autohotkey listens for these keypresses and outputs the appropriate shortcut. I also added a 3-way switch to the Macropad so you can have different layers to the macros. I use the Serial output as a method of debugging, whenever you press a key, It outputs the letter assigned to the key and the current mode of the 3-Way switch
 ## Precompiled Firmware
 I included the precompiled firmware I'm using alongside the source-code. The Firmware.hex is okay, however you might want to change the media keybindings. You almost definitly want to customise the autohotkey script (also both precompiled and Source-code available) since most keys open programs that I use often but most people will have never heard of (e.g. Cura) and the key set to output your email address just prints [EMAIL1] since I'm not sharing my personal email addresses (duh).
-![Optional Text](main/image.png)
 ## Installing Precompiled Firmware
 If for some unholy reason you want to use my precompiled firmware, here it is:
 

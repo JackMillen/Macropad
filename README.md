@@ -15,7 +15,8 @@ Macropad:
   3. Open Teensy Loader
   4. File/Open HEX file
   5. Press program button on teensy
-  6. DONE (LEDs should flash when powered on)
+  6. Press Upload
+  7. DONE (LEDs should flash when powered on)
 Windows Side:
   1. Win+R
   2. Run "shell:startup"

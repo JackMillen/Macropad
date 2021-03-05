@@ -17,7 +17,7 @@ If for some unholy reason you want to use my precompiled firmware, here it is:
   5. Press program button on teensy
   6. Press Upload
   7. DONE (LEDs should flash when powered on)
-### Windows Side:
+### Windows:
   1. Win+R
   2. Run "shell:startup"
   3. Copy Macropad.exe into the folder

@@ -22,6 +22,8 @@ If for some unholy reason you want to use my precompiled firmware, here it is:
   2. Run "shell:startup"
   3. Copy Macropad.exe into the folder
   4. DONE
+## Test Firmware
+
 ## Parts List
 - 1x Big Wheel.stl
 - 1x Top.stl

@@ -23,7 +23,7 @@ If for some unholy reason you want to use my precompiled firmware, here it is:
   3. Copy Macropad.exe into the folder
   4. DONE
 ## Test Firmware
-
+When I was wiring the 
 ## Parts List
 - 1x Big Wheel.stl
 - 1x Top.stl

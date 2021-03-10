@@ -9,7 +9,7 @@ The Macropad is recognised by the PC as a keyboard+mouse+joystick+serial device.
 I included the precompiled firmware I'm using alongside the source-code. The Firmware.hex is okay, however you might want to change the media keybindings. You almost definitly want to customise the autohotkey script (also both precompiled and Source-code available) since most keys open programs that I use often but most people will have never heard of (e.g. Cura) and the key set to output your email address just prints [EMAIL1] since I'm not sharing my personal email addresses (duh).
 ## Installing Precompiled Firmware
 If for some unholy reason you want to use my precompiled firmware, here it is:
-###### Test Firmware
+## Test Firmware
 When I was wiring the Macropad, I wanted to test the connections
 ### Macropad:
   1. Download [Teensy Loader](https://www.pjrc.com/teensy/teensy.exe)

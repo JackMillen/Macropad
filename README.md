@@ -10,7 +10,7 @@ I included the precompiled firmware I'm using alongside the source-code. The Fir
 ## Installing Precompiled Firmware
 If for some unholy reason you want to use my precompiled firmware, here it is:
 ## Test Firmware
-When I was wiring the Macropad, I wanted to test the connections
+When I was wiring the Macropad, I wanted to test the connections so I made a test program that just spits out sensor values over serial so they can be read by software like PuTTY or Arduino IDE. This helps find issues with the Button Matrix and Rotary Encoders
 ### Macropad:
   1. Download [Teensy Loader](https://www.pjrc.com/teensy/teensy.exe)
   2. Download Firmware.hex from the Firmware directory

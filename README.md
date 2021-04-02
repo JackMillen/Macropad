@@ -9,8 +9,6 @@ The Macropad is recognised by the PC as a keyboard+mouse+joystick+serial device.
 I included the precompiled firmware I'm using alongside the source-code. The Firmware.hex is okay, however you might want to change the media keybindings. You almost definitly want to customise the autohotkey script (also both precompiled and Source-code available) since most keys open programs that I use often but most people will have never heard of (e.g. Cura) and the key set to output your email address just prints [EMAIL1] since I'm not sharing my personal email addresses (duh).
 ## Installing Precompiled Firmware
 If for some unholy reason you want to use my precompiled firmware, here it is:
-## Test Firmware
-When I was wiring the Macropad, I wanted to test the connections so I made a test program that just spits out sensor values over serial so they can be read by software like PuTTY or Arduino IDE. This helps find issues with the Button Matrix and Rotary Encoders
 #### Macropad:
   1. Download [Teensy Loader](https://www.pjrc.com/teensy/teensy.exe)
   2. Download Firmware.hex from the Firmware directory
@@ -24,6 +22,8 @@ When I was wiring the Macropad, I wanted to test the connections so I made a tes
   2. Run "shell:startup"
   3. Copy Macropad.exe into the folder
   4. DONE
+## Test Firmware
+When I was wiring the Macropad, I wanted to test the connections so I made a test program that just spits out sensor values over serial so they can be read by software like PuTTY or Arduino IDE. This helps find hardware issues with the Button Matrix and Rotary Encoders. Since I haven't uploaded wiring diagrams yet it probably isn't too useful
 ## Parts List
 - 1x Big Wheel.stl
 - 1x Top.stl

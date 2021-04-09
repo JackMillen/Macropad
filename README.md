@@ -1,4 +1,5 @@
 # Macropad
+![](Pictures/Finished.jpg)
 ## What is it?
 This is a small USB Keyboard with rotary encoders designed to have shortcuts assigned to them
 ## WTF was the warning in the description

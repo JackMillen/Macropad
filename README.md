@@ -2,6 +2,8 @@
 ![](Pictures/Finished.jpg)
 ## What is it?
 This is a small USB Keyboard with rotary encoders designed to have shortcuts assigned to them
+
+It consists of a 3D printed enclosure with 4 Dials, 1 Big Wheel and 13 Mechanical KeySwitches. It also has a 3-Way Switch to switch between button layers. Its powered by a Teensy 4.0 (First time using a teensy and I am hooked)
 ## WTF was the warning in the description
 I don't know what I'm doing. My code works, but it's not written in a way that is particularly understandable. the same applies for my 3D models, I haven't modelled this in a way that's easy to modify. It works enough for me. This project was designed for me to use and no-one else. The only reason this repository exists is a place to store the code. You can do with this how you want. Just be warned.
 ## Main Principal

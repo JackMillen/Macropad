@@ -99,14 +99,15 @@ void setup() {
   }
 
   //Serial Starup Message
-  Serial.println("----------------------------");
-  Serial.println("-----Macropad V1.2 2021-----");
-  Serial.println("-------By Jack Millen-------");
-  Serial.println("----------------------------");
+  Serial.println("----------------------------------");
+  Serial.println("-----Macropad V1.3 Alpha 2022-----");
+  Serial.println("----------By Jack Millen----------");
+  Serial.println("----------------------------------");
 }
 
 void loop() {
 
+  
   //More sample code I copied and modified from the Keypad library
   char customKey = customKeypad.getKey();
   if (customKey){
@@ -119,19 +120,40 @@ void loop() {
     Serial.println(customKey);
 
     //Key actions
-    if (customKey == 'A'){Keyboard.press(KEY_F13);Keyboard.release(KEY_F13);}
-    if (customKey == 'B'){Keyboard.press(KEY_F14);Keyboard.release(KEY_F14);}
-    if (customKey == 'C'){Keyboard.press(KEY_F15);Keyboard.release(KEY_F15);}
-    if (customKey == 'D'){Keyboard.press(KEY_F16);Keyboard.release(KEY_F16);}
-    if (customKey == 'E'){Keyboard.press(KEY_F17);Keyboard.release(KEY_F17);}
-    if (customKey == 'F'){Keyboard.press(KEY_F18);Keyboard.release(KEY_F18);}
-    if (customKey == 'G'){Keyboard.press(KEY_F19);Keyboard.release(KEY_F19);}
-    if (customKey == 'H'){Keyboard.press(KEY_F20);Keyboard.release(KEY_F20);}
-    if (customKey == 'I'){Keyboard.press(KEY_MEDIA_PLAY_PAUSE);Keyboard.release(KEY_MEDIA_PLAY_PAUSE);}
-    if (customKey == 'J'){Keyboard.set_modifier(MODIFIERKEY_CTRL);Keyboard.press(KEY_W);Keyboard.release(KEY_W);Keyboard.set_modifier(0);Keyboard.send_now();}
-    if (customKey == 'K'){Keyboard.press(KEY_LEFT);Keyboard.release(KEY_LEFT);}
-    if (customKey == 'L'){Keyboard.press(KEY_RIGHT);Keyboard.release(KEY_RIGHT);}
-    if (customKey == 'M'){Keyboard.press(KEY_MEDIA_MUTE);Keyboard.release(KEY_MEDIA_MUTE);}
+    if (digitalRead(sw1) == 0) {  // Switch UP
+      if (customKey == 'A'){}
+      if (customKey == 'B'){}
+      if (customKey == 'C'){}
+      if (customKey == 'D'){Keyboard.press(KEY_F21);Keyboard.release(KEY_F21);} //Open Arduino IDE
+      if (customKey == 'E'){Keyboard.press(KEY_TAB);Keyboard.release(KEY_TAB);} //Indent
+      if (customKey == 'F'){Keyboard.set_modifier(MODIFIERKEY_SHIFT);Keyboard.press(KEY_TAB);Keyboard.release(KEY_TAB);Keyboard.set_modifier(0);Keyboard.send_now();} //Reverse Indent
+      if (customKey == 'G'){Keyboard.set_modifier(MODIFIERKEY_CTRL);Keyboard.press(KEY_R);Keyboard.release(KEY_R);Keyboard.set_modifier(0);Keyboard.send_now();} //Verify
+      if (customKey == 'H'){Keyboard.set_modifier(MODIFIERKEY_CTRL);Keyboard.press(KEY_U);Keyboard.release(KEY_U);Keyboard.set_modifier(0);Keyboard.send_now();} //Upload
+      if (customKey == 'I'){Keyboard.set_modifier(MODIFIERKEY_CTRL | MODIFIERKEY_SHIFT);Keyboard.press(KEY_M);Keyboard.release(KEY_M);Keyboard.set_modifier(0);Keyboard.send_now();} //Monitor
+      if (customKey == 'J'){Keyboard.set_modifier(MODIFIERKEY_CTRL | MODIFIERKEY_SHIFT);Keyboard.press(KEY_L);Keyboard.release(KEY_L);Keyboard.set_modifier(0);Keyboard.send_now();} //Plotter
+      if (customKey == 'K'){Keyboard.press(KEY_F22);Keyboard.release(KEY_F22);} //Serial Print
+      if (customKey == 'L'){Keyboard.press(KEY_F23);Keyboard.release(KEY_F23);} //IF
+      if (customKey == 'M'){Keyboard.press(KEY_F24);Keyboard.release(KEY_F24);} //While
+      }
+    else if (digitalRead(sw2) == 0) { // Switch DOWN
+      
+      }
+    else { // Switch MID
+      if (customKey == 'A'){Keyboard.press(KEY_F13);Keyboard.release(KEY_F13);}
+      if (customKey == 'B'){Keyboard.press(KEY_F14);Keyboard.release(KEY_F14);}
+      if (customKey == 'C'){Keyboard.press(KEY_F15);Keyboard.release(KEY_F15);}
+      if (customKey == 'D'){Keyboard.press(KEY_F16);Keyboard.release(KEY_F16);}
+      if (customKey == 'E'){Keyboard.press(KEY_F17);Keyboard.release(KEY_F17);}
+      if (customKey == 'F'){Keyboard.press(KEY_F18);Keyboard.release(KEY_F18);}
+      if (customKey == 'G'){Keyboard.press(KEY_F19);Keyboard.release(KEY_F19);}
+      if (customKey == 'H'){Keyboard.press(KEY_F20);Keyboard.release(KEY_F20);}
+      if (customKey == 'I'){Keyboard.press(KEY_MEDIA_PLAY_PAUSE);Keyboard.release(KEY_MEDIA_PLAY_PAUSE);}
+      if (customKey == 'J'){Keyboard.set_modifier(MODIFIERKEY_CTRL);Keyboard.press(KEY_W);Keyboard.release(KEY_W);Keyboard.set_modifier(0);Keyboard.send_now();}
+      if (customKey == 'K'){Keyboard.press(KEY_LEFT);Keyboard.release(KEY_LEFT);}
+      if (customKey == 'L'){Keyboard.press(KEY_RIGHT);Keyboard.release(KEY_RIGHT);}
+      if (customKey == 'M'){Keyboard.press(KEY_F);Keyboard.release(KEY_F);}
+      }
+    
   }
   //Setting LED depending on 3-Way position
   if (digitalRead(sw1) == 0) {digitalWrite(led1, HIGH);}
@@ -140,7 +162,7 @@ void loop() {
   if (digitalRead(sw2) != 0) {digitalWrite(led2, LOW);}
 
   //Rotary Encoder Positive Actions
-  if (enc1.read()/4> past1){Keyboard.press(KEY_MEDIA_VOLUME_INC);Keyboard.release(KEY_MEDIA_VOLUME_INC);}
+  if (enc1.read()/2> past1){Keyboard.press(KEY_MEDIA_VOLUME_INC);Keyboard.release(KEY_MEDIA_VOLUME_INC);}
   
   if (digitalRead(sw1) == 0){                  //UP
     
@@ -149,12 +171,12 @@ void loop() {
     
   }
   else{                                        //MIDDLE
-    if (enc5.read()/4 > past5){Mouse.scroll(-2);}
-    if (enc2.read()/4 > past2){Keyboard.press(KEY_LEFT);Keyboard.release(KEY_LEFT);}
+    if (enc5.read()/2 > past5){Mouse.scroll(-2);}
+    if (enc2.read()/2 < past2){Keyboard.press(KEY_LEFT);Keyboard.release(KEY_LEFT);}
   }
   
   //Rotary Encoder Negative Actions
-  if (enc1.read()/4< past1){Keyboard.press(KEY_MEDIA_VOLUME_DEC);Keyboard.release(KEY_MEDIA_VOLUME_DEC);}
+  if (enc1.read()/2< past1){Keyboard.press(KEY_MEDIA_VOLUME_DEC);Keyboard.release(KEY_MEDIA_VOLUME_DEC);}
   
   if (digitalRead(sw1) == 0){                  //UP
     
@@ -163,15 +185,15 @@ void loop() {
     
   }
   else {                                       //MIDDLE
-    if (enc5.read()/4 < past5){Mouse.scroll(2);}
-    if (enc2.read()/4 > past2){Keyboard.press(KEY_RIGHT);Keyboard.release(KEY_RIGHT);}
+    if (enc5.read()/2 < past5){Mouse.scroll(2);}
+    if (enc2.read()/2 > past2){Keyboard.press(KEY_RIGHT);Keyboard.release(KEY_RIGHT);}
   }
 
   //Setting past rotary encoder values
-  past1 = enc1.read()/4;
-  past2 = enc2.read()/4;
-  past3 = enc3.read()/4;
-  past4 = enc4.read()/4;
-  past5 = enc5.read()/4;
+  past1 = enc1.read()/2;
+  past2 = enc2.read()/2;
+  past3 = enc3.read();
+  past4 = enc4.read();
+  past5 = enc5.read()/2;
 
 }

@@ -192,8 +192,9 @@ void loop() {
   //Setting past rotary encoder values
   past1 = enc1.read()/2;
   past2 = enc2.read()/2;
-  past3 = enc3.read();
-  past4 = enc4.read();
+  past3 = enc3.read()/2;
+  past4 = enc4.read()/2;
   past5 = enc5.read()/2;
 
+  delay(50);
 }
